@@ -6,12 +6,12 @@ const createUserInputs: InputType[] = [
 		type: "text",
 		placeholder: "Username*",
 		required: true,
+		autoFocus: true,
 		customStyles: "col-span-4 sm:col-span-4",
 	},
 	{
 		name: "fullName",
 		type: "text",
-		autoFocus: true,
 		placeholder: "Full Name",
 		customStyles: "col-span-4 sm:col-span-2",
 	},
