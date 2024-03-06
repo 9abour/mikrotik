@@ -2,32 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+	button {
+		@apply font-medium;
+		&:disabled {
+			cursor: not-allowed;
+		}
+	}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	a {
+		@apply font-medium;
+	}
+
+	li {
+		@apply list-none;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold text-grey-iron;
+	}
+
+	span,
+	p,
+	a {
+		@apply text-grey-iron;
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	@apply bg-primary-bg;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
+	.flex-jc-c {
+		@apply flex justify-center items-center;
+	}
+	.flex-jb-c {
+		@apply flex justify-between items-center;
+	}
+	.flex-je-c {
+		@apply flex justify-evenly items-center;
+	}
+	.flex-ic-c {
+		@apply flex items-center;
+	}
+	.flex-js-c {
+		@apply flex justify-start items-center;
+	}
+	.flex-i-c {
+		@apply flex justify-start items-center;
+	}
+
+	.translate-x-center {
+		@apply -translate-x-2/4 left-2/4;
+	}
+	.translate-y-center {
+		@apply -translate-y-2/4 top-2/4;
+	}
+}
+
+@layer components {
+	.sidebar__sub__links {
+		@apply w-full flex-i-c gap-2 text-grey-iron !border-0;
+
+		&:hover {
+			@apply text-primary-mediumForestGreen bg-primary-mediumForestGreen/10;
+			span {
+				@apply text-primary-mediumForestGreen;
+			}
+		}
+	}
+	.sidebar__sub_title {
+		@apply ml-2 block py-2 text-grey-monsoon uppercase text-sm;
+	}
+	.sidebar__mob__sub__links {
+		@apply relative !w-[40px] !h-[40px] mx-auto transition-all;
+		span {
+			@apply text-primary-mediumForestGreen;
+		}
+		&:hover {
+			span {
+				opacity: 1;
+				@apply transition-all;
+			}
+		}
+		svg {
+			@apply !w-[20px] !h-[20px] mx-auto;
+		}
+		span {
+			@apply absolute left-[50px] bg-primary-dark2 px-2 opacity-0;
+		}
+	}
 }
