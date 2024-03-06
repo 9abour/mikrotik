@@ -3,9 +3,11 @@ import { FormPropsType } from "../types/index.types";
 import Button from "../../button/components/Button";
 import Input from "./Input";
 
-const Form = ({ submitText, inputs }: FormPropsType) => {
+const Form = ({ submitText, inputs, title }: FormPropsType) => {
 	return (
-		<form className="w-full max-w-[600px] grid grid-cols-4 px-4 gap-2">
+		<form className="w-full max-w-[1200px] grid grid-cols-4 mx-auto  gap-2">
+			{title ? <h1 className="text-3xl col-span-4">{title}</h1> : null}
+
 			{inputs.map(input => (
 				<Input
 					key={input.name}

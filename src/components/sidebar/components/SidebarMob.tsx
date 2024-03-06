@@ -15,7 +15,7 @@ const SidebarMob = () => {
 	const { sidebarOpen, toggle } = useContext(SidebarContext);
 
 	return (
-		<aside className="relative min-w-[80px] h-screen py-2 bg-primary-dark1 z-50">
+		<aside className="relative min-w-[80px] h-screen py-2 bg-primary-dark1 z-10">
 			<div className={`${sidebarOpen ? "flex-jb-c" : "flex-jc-c"}`}>
 				<Logo isDesktop={sidebarOpen} />
 				{sidebarOpen ? (

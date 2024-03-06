@@ -36,10 +36,18 @@ const Input = ({
 			/>
 
 			{type == "password" ? (
-				<EyeButton isShowPassword={currentState} toggle={toggle} />
+				<EyeButton
+					isShowPassword={currentState}
+					toggle={toggle}
+					label={label}
+				/>
 			) : null}
 
-			<span className="absolute left-4 top-2/4 -translate-y-2/4 text-grey-monsoon">
+			<span
+				className={`absolute left-4 -translate-y-2/4 text-grey-monsoon ${
+					label ? "top-[calc(50%+12px)]" : "top-2/4"
+				}`}
+			>
 				{icon}
 			</span>
 		</div>

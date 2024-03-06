@@ -22,7 +22,7 @@ const Sidebar = () => {
 	}
 
 	return (
-		<aside className="relative min-w-[300px] h-screen py-2 bg-primary-dark1 z-50">
+		<aside className="relative min-w-[300px] h-screen py-2 bg-primary-dark1 z-10">
 			<div className="flex-jb-c">
 				<Logo isDesktop={true} />
 				<Button

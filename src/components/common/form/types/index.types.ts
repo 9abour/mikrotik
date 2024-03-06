@@ -13,6 +13,7 @@ export type InputType = {
 };
 
 export type FormPropsType = {
+	title?: string;
 	inputs: InputType[];
 	submitText: string;
 	submitFunc: (e: FormEvent) => void;

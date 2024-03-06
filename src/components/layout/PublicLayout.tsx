@@ -12,9 +12,9 @@ const PublicLayout = ({ children }: IChildren) => {
 		<div className="flex">
 			<Sidebar />
 			<main
-				className={`absolute w-[calc(100%-80px)] ${
+				className={`absolute w-[calc(100%-80px)] right-0 transition-all ${
 					sidebarOpen ? "sm:w-[calc(100%-300px)]" : "sm:w-[calc(100%-80px)]"
-				} right-0`}
+				}`}
 			>
 				{children}
 			</main>

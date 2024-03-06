@@ -13,19 +13,28 @@ export const overviewData: SidebarSubLinksType[] = [
 	{
 		name: "User",
 		icon: <FaRegUser />,
-		links: [{ name: "Add User", href: "/add-user" }],
+		links: [
+			{ name: "Users", href: "/user" },
+			{ name: "Add User", href: "/user/create" },
+		],
 		isActive: false,
 	},
 	{
 		name: "Nas",
 		icon: <FaNetworkWired />,
-		links: [{ name: "Add Nas", href: "/add-nas" }],
+		links: [
+			{ name: "Nas", href: "/nas" },
+			{ name: "Add Nas", href: "/nas/create" },
+		],
 		isActive: false,
 	},
 	{
 		name: "Service",
 		icon: <MdElectricalServices />,
-		links: [{ name: "Add Service", href: "/add-service" }],
+		links: [
+			{ name: "Services", href: "/service" },
+			{ name: "Add Service", href: "/service/create" },
+		],
 		isActive: false,
 	},
 ];

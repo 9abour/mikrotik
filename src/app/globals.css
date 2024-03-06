@@ -32,6 +32,28 @@
 	a {
 		@apply text-grey-iron;
 	}
+
+	*::-webkit-scrollbar {
+		@apply w-2 h-2;
+	}
+
+	*::-webkit-scrollbar-track {
+		@apply bg-primary-dark1 rounded-md;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		@apply bg-primary-mediumForestGreen rounded-md;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	input[type="number"] {
+		-moz-appearance: textfield;
+	}
 }
 
 body {

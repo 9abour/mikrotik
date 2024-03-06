@@ -1,4 +1,6 @@
+import { FaRegUser } from "react-icons/fa";
 import { InputType } from "@/components/common/form/types/index.types";
+import { RiLockPasswordLine } from "react-icons/ri";
 
 export const singInFormInputsData: InputType[] = [
 	{
@@ -9,6 +11,7 @@ export const singInFormInputsData: InputType[] = [
 		autoFocus: true,
 		customStyles: "col-span-4",
 		label: "Enter your username",
+		icon: <FaRegUser size={20} />,
 	},
 	{
 		name: "password",
@@ -17,6 +20,7 @@ export const singInFormInputsData: InputType[] = [
 		required: true,
 		customStyles: "col-span-4",
 		label: "Enter your password",
+		icon: <RiLockPasswordLine size={20} />,
 	},
 ];
 
