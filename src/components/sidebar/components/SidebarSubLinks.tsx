@@ -2,6 +2,7 @@ import Button from "@/components/common/button/components/Button";
 import SidebarSubLink from "@/components/sidebar/components/SidebarSubLink";
 import { SidebarSubLinksType } from "@/components/sidebar/types/index.types";
 import useToggle from "@/hooks/click-handlers/useToggle";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -11,13 +12,17 @@ const SidebarSubLinks = ({
 	links,
 	isActive,
 	customStyles,
+	href,
 }: SidebarSubLinksType) => {
 	const { currentState, toggle } = useToggle(isActive);
+	const { push } = useRouter();
 
 	return (
 		<>
 			<Button
-				onclick={toggle}
+				onclick={() => {
+					href ? push(href) : toggle();
+				}}
 				customStyles={`sidebar__sub__links ${customStyles}`}
 			>
 				{links?.length ? (

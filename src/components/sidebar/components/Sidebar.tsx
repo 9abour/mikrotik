@@ -38,13 +38,7 @@ const Sidebar = () => {
 			<p className="sidebar__sub_title">Overview</p>
 			<ul className="px-2">
 				{overviewData.map(item => (
-					<SidebarSubLinks
-						key={item.name}
-						name={item.name}
-						icon={item.icon}
-						isActive={item.isActive}
-						links={item.links}
-					/>
+					<SidebarSubLinks key={item.name} {...item} />
 				))}
 			</ul>
 			<HorizontalDivider

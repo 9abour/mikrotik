@@ -8,6 +8,7 @@ export const overviewData: SidebarSubLinksType[] = [
 		name: "Dashboard",
 		icon: <RxDashboard />,
 		isActive: false,
+		href: "/",
 	},
 	{
 		name: "User",

@@ -11,6 +11,7 @@ type SidebarSubLinksType = {
 	isActive: boolean;
 	links?: SidebarSubLinkItemType[];
 	customStyles?: string;
+	href?: string;
 };
 
 export type { SidebarSubLinkItemType, SidebarSubLinksType };
